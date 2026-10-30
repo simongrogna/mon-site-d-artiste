@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectacles & Créations — Simon Grogna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <header class="navbar">
+        <div class="logo"></div>
+        <!-- Bouton Hamburger mobile -->
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-btn">Accueil</a></li>
+                <li><a href="cirque.html" class="nav-btn">Cirque</a></li>
+                <li><a href="musique.html" class="nav-btn">Musique</a></li>
+                <li><a href="spectacles.html" class="nav-btn">Spectacles / Créations</a></li>
+                <li><a href="bio-contact.html" class="nav-btn">Bio / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content-container">
+        <section class="page-section">
+            <div class="section-header">
+                <h2>✨ Spectacles / Créations</h2>
+            </div>
+            <!-- PREMIER RECTANGLE : PROTOCOLE DE COURAGE -->
+            <article class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Protocole de courage ou comment apprendre à broyer</h3>
+                    <p class="project-description">
+                        Compositeur de la bande sonore du spectacle. Musicien live avec Liséi Nauleau au chant dans le rôle de la 
+                        « montagne ».
+                    </p><br>
+                    <div class="project-buttons">
+                        <a href="lien-vers-teaser.mp4" target="_blank" class="platform-link-btn">
+                            <span>Teaser</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="documents/note-intention.pdf" target="_blank" class="platform-link-btn">
+                            <span>Note d'intention</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="documents/fiche-technique.pdf" target="_blank" class="platform-link-btn">
+                            <span>Fiche technique</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="images/ptclcreuse.jpg" class="platform-link-btn spectacle-gallery-btn" data-images='["images/ptclcreuse.jpg", "images/ptlcreuse_2.jpg", "images/ptlcreuse_3.jpg", "images/ptclcreuse_4.jpg"]'>
+                            <span>Photos</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- DEUXIÈME RECTANGLE : MAIS LE CIRQUE IL EST OÙ ? -->
+            <article class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Mais le cirque il est où ?</h3>
+                    <p class="project-description">
+                        Comme je suis encore en formation à l'Esactolido, il n'y a pas de numéro de cirque "fini" mais BIENTÔT :-) !
+                    </p><br>
+                    <div class="project-buttons">
+                        <a href="lien-vers-teaser.mp4" target="_blank" class="platform-link-btn">
+                            <span>Teaser</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="documents/note-intention.pdf" target="_blank" class="platform-link-btn">
+                            <span>Note d'intention</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="documents/fiche-technique.pdf" target="_blank" class="platform-link-btn">
+                            <span>Fiche technique</span>
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="INSERER IMAGE 1" class="platform-link-btn spectacle-gallery-btn" data-images='["images/images2", "images/autreimages",]'>
+                            <span>Photos</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content" style="justify-content: center;">
+            <p class="copyright">© 2026 Simon Grogna. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <!-- LA FENÊTRE MODALE (LIGHTBOX) UNIQUE -->
+    <div id="imageLightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-nav lightbox-prev">&#10094;</button>
+        <img class="lightbox-content" id="lightboxImg" alt="Agrandissement">
+        <button class="lightbox-nav lightbox-next">&#10095;</button>
+        <div id="lightboxCounter" class="lightbox-counter">1 / 2</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

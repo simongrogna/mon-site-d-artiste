@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musique — Simon Grogna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <header class="navbar">
+        <div class="logo"></div>
+        <!-- Bouton Hamburger mobile -->
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-btn">Accueil</a></li>
+                <li><a href="cirque.html" class="nav-btn">Cirque</a></li>
+                <li><a href="musique.html" class="nav-btn active">Musique</a></li>
+                <li><a href="spectacles.html" class="nav-btn">Spectacles / Créations</a></li>
+                <li><a href="bio-contact.html" class="nav-btn">Bio / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content-container">
+        <section class="page-section">
+            <div class="section-header">
+                <h2>🎵 Musique</h2>
+                <p><br>J’adore lier ma musique au cirque. Mon style de musique est donc très lié aux musiques de spectacle et de cirque : des ambiances expérimentales en passant par des rythmes soutenus et des nappes enveloppantes.
+                    <br><br>J'essaye de valoriser la plateforme Bandcamp car elle rémunère mieux les artistes. Mais si vous préférez les plateformes plus "mainstream" c'est aussi dispo.
+                    <br><br>Pour toute demande concernant une utilisation, un montage ou une création sonore, merci de me contacter par mail.         
+                </p>
+            </div>
+            <!-- Boutons Plateformes en haut -->
+            <div class="platform-btn-container">
+                <a href="https://simongrogna.bandcamp.com/" target="_blank" class="platform-link-btn">
+                    <span>BANDCAMP</span>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="https://linktr.ee/SimonGrogna?utm_source=linktree_profile_share&ltsid=7c147a66-8734-4b82-9c51-142713539aaf" target="_blank" class="platform-link-btn">
+                    <span>PLATEFORMES</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <div class="music-hero-video-section">
+                <!-- Section Musiques non disponibles sur les plateformes -->
+                <div class="exclusive-audio-section">
+                    <p class="section-subtitle"><i>Ci-dessous les musiques de spectacles / numéros qui ne sont pas disponibles sur les plateformes :</i></p>
+                    <div class="audio-list">
+                        
+                        <!-- Piste 1 -->
+                        <div class="audio-item">
+                            <div class="audio-info">
+                                <span class="audio-title">Essai plongeons</span>
+                                <span class="audio-meta">Essai plongeons à l'Esactolido en 2025</span>
+                            </div>
+                            <div class="custom-audio-player">
+                                <button class="play-btn" aria-label="Lecture">▶</button>
+                                <div class="progress-container">
+                                    <input type="range" class="seek-slider" value="0" min="0" max="100" step="0.1">
+                                    <div class="time-info">
+                                        <span class="current-time">0:00</span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                </div>
+                                <audio preload="metadata">
+                                    <source src="audio/numéros créations sonores/essaipl.wav" type="audio/wav">
+                                </audio>
+                            </div>
+                        </div>
+
+                        <!-- Piste 2 -->
+                        <div class="audio-item">
+                            <div class="audio-info">
+                                <span class="audio-title">Nuit du cirque 2025</span>
+                                <span class="audio-meta">Création sonore pour la nuit du cirque à l'Esactolido en 2025</span>
+                            </div>
+                            <div class="custom-audio-player">
+                                <button class="play-btn" aria-label="Lecture">▶</button>
+                                <div class="progress-container">
+                                    <input type="range" class="seek-slider" value="0" min="0" max="100" step="0.1">
+                                    <div class="time-info">
+                                        <span class="current-time">0:00</span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                </div>
+                                <audio preload="metadata">
+                                    <source src="audio/numéros créations sonores/nuitcirque2025.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+
+                        <!-- Piste 3 -->
+                        <div class="audio-item">
+                            <div class="audio-info">
+                                <span class="audio-title">Essai "Se présenter"</span>
+                                <span class="audio-meta">Premier essai de cirque à l'Esactolido</span>
+                            </div>
+                            <div class="custom-audio-player">
+                                <button class="play-btn" aria-label="Lecture">▶</button>
+                                <div class="progress-container">
+                                    <input type="range" class="seek-slider" value="0" min="0" max="100" step="0.1">
+                                    <div class="time-info">
+                                        <span class="current-time">0:00</span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                </div>
+                                <audio preload="metadata">
+                                    <source src="audio/numéros créations sonores/essaipres.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+
+                        <!-- Piste 4 -->
+                        <div class="audio-item">
+                            <div class="audio-info">
+                                <span class="audio-title">Sélections 2025</span>
+                                <span class="audio-meta">Numéro de sélections école supérieure de cirque en 2025</span>
+                            </div>
+                            <div class="custom-audio-player">
+                                <button class="play-btn" aria-label="Lecture">▶</button>
+                                <div class="progress-container">
+                                    <input type="range" class="seek-slider" value="0" min="0" max="100" step="0.1">
+                                    <div class="time-info">
+                                        <span class="current-time">0:00</span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                </div>
+                                <audio preload="metadata">
+                                    <source src="audio/numéros créations sonores/selec2025.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <p><br><i>Discographie :</i></p>
+            
+            <!-- Grille d'albums / sorties musicales (Ordre inversé : du plus récent au plus ancien) -->
+            <div class="music-grid">
+
+                <div class="music-item">
+                    <div class="music-img-wrap gallery-item">
+                        <img src="images/cover sons/Cover En cours de route.png" alt="En cours de route">
+                    </div>
+                    <p class="music-caption">« En cours de route » : album de 10 titres sorti le 31 mai 2026</p>
+                </div>
+
+                <div class="music-item">
+                    <div class="music-img-wrap gallery-item">
+                        <img src="images/cover sons/Cover project Album 2 -Ascension-.png" alt="Ascension">
+                    </div>
+                    <p class="music-caption">« Ascension » : album de 15 titres sorti le 25 janvier 2026</p>
+                </div>
+
+                <div class="music-item">
+                    <div class="music-img-wrap gallery-item">
+                        <img src="images/cover sons/Cris feat Liséi.jpeg" alt="Cris">
+                    </div>
+                    <p class="music-caption">« Cris » : single en feat avec Lisei sorti le 22 octobre 2025</p>
+                </div>
+
+                <div class="music-item">
+                    <div class="music-img-wrap gallery-item">
+                        <img src="images/cover sons/L'ANANKE.png" alt="L'ananke">
+                    </div>
+                    <p class="music-caption">« L’ananke feat Dasak » : musique de spectacle sortie le 24 septembre 2025</p>
+                </div>
+
+                <div class="music-item">
+                    <div class="music-img-wrap gallery-item">
+                        <img src="images/cover sons/Fais quelque chose.png" alt="Fais quelque chose">
+                    </div>
+                    <p class="music-caption">« Fais quelque chose » : single sorti le 19 septembre 2025</p>
+                </div>
+
+                <div class="music-item">
+                    <div class="music-img-wrap gallery-item">
+                        <img src="images/cover sons/UNIVERS.jpg" alt="Univers">
+                    </div>
+                    <p class="music-caption">« Univers » : album de 5 titres sorti le 11 août 2025</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Lightbox pour zoomer les images -->
+    <div id="lightboxModal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+        <img class="lightbox-img" id="lightboxImg" alt="Agrandissement">
+        <span class="lightbox-arrow lightbox-next">&#10095;</span>
+    </div>
+    <footer>
+        <div class="footer-content" style="justify-content: center;">
+            <p class="copyright">© 2026 Simon Grogna. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

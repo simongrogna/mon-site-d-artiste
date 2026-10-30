@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirque — Simon Grogna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <header class="navbar">
+        <div class="logo"></div>
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-btn">Accueil</a></li>
+                <li><a href="cirque.html" class="nav-btn active">Cirque</a></li>
+                <li><a href="musique.html" class="nav-btn">Musique</a></li>
+                <li><a href="spectacles.html" class="nav-btn">Spectacles / Créations</a></li>
+                <li><a href="bio-contact.html" class="nav-btn">Bio / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <section class="page-section">
+            <div class="section-header">
+                <h2>🎪 Cirque</h2>
+                <p class="project-description" style="margin-top: 1.5rem; line-height: 1.8;">
+                    Le cirque mais surtout la jonglerie sont pour moi un moyen de m'exprimer, de me sentir bien. 
+                    Je cherche beaucoup ma corporalité à moi, ma relation propre aux objets. 
+                    Comment je bouge avec le poids, la sensation des balles. J'aime beaucoup le 1 et 3 balles,
+                    les tricks, les body throws,... J'aime aussi la technique pure, 5 et 7 balles ainsi que le travail de pirouette.
+                </p>
+                <p class="project-description" style="margin-top: 1.5rem; line-height: 1.8;">
+                    Voici une petite galerie photos de mes présentations de cirque (Crédits photos : Xillok et Jean) :
+                </p>
+            </div>
+            <!-- Galerie photo avec flèches latérales -->
+            <div class="photo-gallery-wrapper">
+                <button class="gallery-arrow gallery-prev" id="gallery-prev-btn">‹</button>
+                <div class="photo-scroll-container">
+                    <div class="gallery-item"><img src="images/essailisei_1.jpg" alt="Cirque 1"></div>
+                    <div class="gallery-item"><img src="images/essaitech_1.jpg" alt="Cirque 2"></div>
+                    <div class="gallery-item"><img src="images/essaitech_2.jpg" alt="Cirque 3"></div>
+                    <div class="gallery-item"><img src="images/essaitech_3.jpg" alt="Cirque 4"></div>
+                    <div class="gallery-item"><img src="images/essaiperso_2.jpg" alt="Cirque 5"></div>
+                    <div class="gallery-item"><img src="images/essaiperso_3.jpg" alt="Cirque 6"></div>
+                    <div class="gallery-item"><img src="images/essaiperso_4.jpg" alt="Cirque 7"></div>
+                    <div class="gallery-item"><img src="images/essaiperso_1.jpg" alt="Cirque 8"></div>
+                    <div class="gallery-item"><img src="images/essaipl_1.jpg" alt="Cirque 9"></div>
+                    <div class="gallery-item"><img src="images/essaipl_2.jpg" alt="Cirque 10"></div>
+                    <div class="gallery-item"><img src="images/essaipl_3.jpg" alt="Cirque 11"></div>
+                </div> 
+                <button class="gallery-arrow gallery-next" id="gallery-next-btn">›</button>
+            </div>
+            <p>
+                Envie de voir des vidéos ? C'est par içi :
+            </p>
+            <!-- SECTION VIDÉO -->
+            <div class="video-section">
+                <h3>Jonglerie 1ère année à l'Esactolido 2026</h3>
+                <p class="video-desc">Montage Jonglerie 1ère année à l'Esactolido. Tricks, impro mais surtout toujours pas de séquences écrites :-) 2026</p>
+                <a href="https://www.youtube.com/watch?v=RGQ1O8P943c" target="_blank" class="youtube-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    Regarder la vidéo sur YouTube
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Modal Lightbox pour zoomer les images -->
+    <div id="lightboxModal" class="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-arrow lightbox-prev" id="lightboxPrev">&#10094;</span>
+        <img class="lightbox-img" id="lightboxImg" alt="Agrandissement">
+        <span class="lightbox-arrow lightbox-next" id="lightboxNext">&#10095;</span>
+    </div>
+    <footer>
+        <div class="footer-content" style="justify-content: center;">
+            <p class="copyright">© 2026 Simon Grogna. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // --- 1. GESTION DU MENU MOBILE ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+
+        // --- 2. GESTION DE LA GALERIE PHOTO (DÉFILEMENT EN BOUCLE) ---
+        const container = document.querySelector('.photo-scroll-container');
+        const prevBtn = document.getElementById('gallery-prev-btn');
+        const nextBtn = document.getElementById('gallery-next-btn');
+
+        if (container && prevBtn && nextBtn) {
+            const getScrollAmount = () => {
+                const item = container.querySelector('.gallery-item');
+                return item ? item.offsetWidth + 24 : 300;
+            };
+
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Si on est tout à fait au bout, on repart au tout début en douceur
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                }
+            });
+
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Si on est au début, on saute directement à la fin
+                if (container.scrollLeft <= 10) {
+                    container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                }
+            });
+        }
+
+        // --- 3. GESTION DE LA LIGHTBOX (ZOOM IMAGES) ---
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        let currentIndex = 0;
+        const imagesSrc = Array.from(galleryItems).map(img => img.src);
+
+        galleryItems.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                lightboxImg.src = imagesSrc[currentIndex];
+                lightboxModal.classList.add('active');
+            });
+        });
+
+        const closeLightbox = () => {
+            lightboxModal.classList.remove('active');
+        };
+
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) closeLightbox();
+        });
+
+        if (lightboxPrev) {
+            lightboxPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + imagesSrc.length) % imagesSrc.length;
+                lightboxImg.src = imagesSrc[currentIndex];
+            });
+        }
+
+        if (lightboxNext) {
+            lightboxNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % imagesSrc.length;
+                lightboxImg.src = imagesSrc[currentIndex];
+            });
+        }
+    });
+    </script>
+</body>
+</html>

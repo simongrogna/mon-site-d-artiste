@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Grogna — Artiste de Cirque & Compositeur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300&display=swap" rel="stylesheet">
+    <style>
+        /* Animation globale de fondu doux (le voyage) */
+        body {
+            transition: opacity 0.35s ease;
+            opacity: 1;
+        }
+
+        body.is-transitioning {
+            opacity: 0;
+        }
+
+        /* Nom en blanc pur (sans erreur CSS de préfixe) */
+        .hero-centered h1 {
+            color: var(--text-main) !important;
+            font-size: 2.6rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        /* Conteneur des boutons */
+        .home-minimal-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            width: 100%;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Style sobre, fin et élégant */
+        .home-minimal-link {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+            padding: 1.05rem 1.8rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .home-minimal-link:hover {
+            border-color: var(--text-main);
+            background: rgba(255, 255, 255, 0.02);
+            transform: translateY(-2px);
+        }
+
+        .link-left {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .link-emoji {
+            font-size: 1.25rem;
+            opacity: 0.85;
+            transition: transform 0.3s ease;
+        }
+
+        .home-minimal-link:hover .link-emoji {
+            transform: scale(1.15);
+            opacity: 1;
+        }
+
+        .home-minimal-link span {
+            font-size: 1.05rem; 
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .home-minimal-link:hover span {
+            color: var(--text-main);
+        }
+
+        .link-arrow {
+            font-size: 1rem;
+            color: var(--text-muted);
+            opacity: 0.4;
+            transition: all 0.3s ease;
+        }
+
+        .home-minimal-link:hover .link-arrow {
+            color: var(--text-main);
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        /* Remontée ciblée sur mobile pour tout placer idéalement sous le menu */
+        @media (max-width: 768px) {
+            .content-container {
+                padding-top: 0.2rem !important;
+                padding-bottom: 0.5rem !important;
+                display: flex;
+                align-items: flex-start !important;
+            }
+            .hero-centered {
+                margin-top: -2.5rem !important;
+            }
+            .hero-centered h1 {
+                font-size: 2.2rem !important;
+                margin-bottom: 0.3rem !important;
+            }
+            .hero-centered .subtitle {
+                font-size: 0.9rem !important;
+                margin-bottom: 1rem !important;
+                line-height: 1.4;
+            }
+            .home-minimal-container {
+                margin-top: 0.8rem !important;
+                gap: 0.75rem;
+                max-width: 350px;
+            }
+            .home-minimal-link {
+                padding: 0.9rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <header class="navbar">
+        <div class="logo"></div>
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-btn active">Accueil</a></li>
+                <li><a href="cirque.html" class="nav-btn">Cirque</a></li>
+                <li><a href="musique.html" class="nav-btn">Musique</a></li>
+                <li><a href="spectacles.html" class="nav-btn">Spectacles / Créations</a></li>
+                <li><a href="bio-contact.html" class="nav-btn">Bio / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content-container">
+        <section class="hero-centered">
+            <h1>Simon Grogna</h1>
+            <p class="subtitle">Artiste de cirque, compositeur de musique et musicien live.</p>
+            
+            <!-- Navigation -->
+            <div class="home-minimal-container">
+                <a href="cirque.html" class="home-minimal-link voyage-link">
+                    <div class="link-left">
+                        <span class="link-emoji">🎪</span>
+                        <span>Cirque</span>
+                    </div>
+                    <span class="link-arrow">→</span>
+                </a>
+
+                <a href="musique.html" class="home-minimal-link voyage-link">
+                    <div class="link-left">
+                        <span class="link-emoji">🎵</span>
+                        <span>Musique</span>
+                    </div>
+                    <span class="link-arrow">→</span>
+                </a>
+
+                <a href="spectacles.html" class="home-minimal-link voyage-link">
+                    <div class="link-left">
+                        <span class="link-emoji">✨</span>
+                        <span>Spectacles / Créations</span>
+                    </div>
+                    <span class="link-arrow">→</span>
+                </a>
+
+                <a href="bio-contact.html" class="home-minimal-link voyage-link">
+                    <div class="link-left">
+                        <span class="link-emoji">✉️</span>
+                        <span>Bio / Contact</span>
+                    </div>
+                    <span class="link-arrow">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content" style="justify-content: center;">
+            <p class="copyright">© 2026 Simon Grogna. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        /* Voyage fluide et conservation de l'historique */
+        document.querySelectorAll('.voyage-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+                e.preventDefault();
+                const targetUrl = this.getAttribute('href');
+
+                document.body.classList.add('is-transitioning');
+
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 320);
+            });
+        });
+    </script>
+</body>
+</html>

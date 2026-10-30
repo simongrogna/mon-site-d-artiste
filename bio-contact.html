@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio / Contact — Simon Grogna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <header class="navbar">
+        <div class="logo"></div>
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-btn">Accueil</a></li>
+                <li><a href="cirque.html" class="nav-btn">Cirque</a></li>
+                <li><a href="musique.html" class="nav-btn">Musique</a></li>
+                <li><a href="spectacles.html" class="nav-btn">Spectacles / Créations</a></li>
+                <li><a href="bio-contact.html" class="nav-btn active">Bio / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content-container">
+        <section class="page-section">
+            <div class="section-header">
+                <h2>✉️ Bio / Contact</h2>
+            </div>
+            <article class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">À propos :</h3>
+                    <p class="project-description" style="margin-bottom: 1.5rem;">
+                        Je m'appelle Simon Grogna. J'ai 21 ans et je suis en étude d'arts du cirque à l'Esactolido à Toulouse. Avant cela, j'ai fait 2 ans de préparatoire au Crac de Lomme. J'ai découvert le cirque pendant un stage de vacances à l'âge de 6 ans à l'école de cirque de Gembloux en Belgique.
+                        Au fil des années le cirque est devenu ma passion et j'ai poursuivi dans l'idée d'en faire mon métier à la sortie de l'école.
+                    </p>
+                    <p class="project-description">
+                        Je compose également beaucoup de musique depuis l'âge de 12 ans. J'ai d'abord fait du djing, puis je me suis tourné vers la composition MAO. 
+                        Cette musique électronique et numérique s'invite de plus en plus dans mon univers de cirque. 
+                    </p>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Contact / collaboration :</h3>
+                    <p class="project-description" style="margin-bottom: 1.5rem;">
+                        Pour toute proposition de spectacle, de création sonore ou de collaboration, vous pouvez me joindre directement ici :
+                    </p>
+                    
+                    <!-- Ligne Mail -->
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="var(--accent-blue)" style="flex-shrink: 0;">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <a href="mailto:simon.grogna@gmail.com" class="contact-link" style="font-size: 1.05rem; word-break: break-all;">simon.grogna@gmail.com</a>
+                    </div>
+
+                    <!-- Ligne Téléphone France -->
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="var(--accent-blue)" style="flex-shrink: 0;">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <a href="tel:+33666585127" class="contact-link" style="font-size: 1.05rem;">+33666585127 (France)</a>
+                    </div>
+
+                    <!-- Ligne Téléphone Belgique -->
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem;">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="var(--accent-blue)" style="flex-shrink: 0;">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <a href="tel:+32475206255" class="contact-link" style="font-size: 1.05rem;">+32475206255 (Belgique)</a>
+                    </div>
+
+                    <!-- Boutons Réseaux Sociaux mis en valeur -->
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://www.instagram.com/simon__grogna/" target="_blank" class="platform-link-btn" style="margin: 0;">
+                            <span>INSTAGRAM</span>
+                            <span>↗</span>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100074760664441" target="_blank" class="platform-link-btn" style="margin: 0;">
+                            <span>FACEBOOK</span>
+                            <span>↗</span>
+                        </a>
+                        <a href="https://www.youtube.com/@SimonGrogna" target="_blank" class="platform-link-btn" style="margin: 0;">
+                            <span>YOUTUBE</span>
+                            <span>↗</span>
+                        </a>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content" style="justify-content: center;">
+            <p class="copyright">© 2026 Simon Grogna. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
